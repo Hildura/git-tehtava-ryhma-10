@@ -8,6 +8,7 @@ public class Main {
     }
 }// Main class end here
 
+// Luokan luonti
 class Kahvinkeitin {
     String vari;
     String merkki;
@@ -19,6 +20,7 @@ class Kahvinkeitin {
         merkki = "Electrolux";
     }
 
+    // Toiminto
     public void PaallePois(boolean on) {
         if (on == true) {
             System.out.println("Kahvinkeitin on päällä.");
@@ -28,6 +30,7 @@ class Kahvinkeitin {
         }
     }
 
+    // Tietojen tulostus
     public void TulostaTiedot() {
         System.out.println("*** Kahvinkeittimen tiedot ***");
         System.out.println("Keittimen väri: " + vari);
