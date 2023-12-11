@@ -5,6 +5,9 @@ public class Main {
         mocca.vari = "Pinkki";
         mocca.merkki = "MoccaMasteri";
         mocca.TulostaTiedot();
+
+        //lisätään H2O
+        mocca.LisaaVetta(1);
     }
 }// Main class end here
 
@@ -13,11 +16,13 @@ class Kahvinkeitin {
     String vari;
     String merkki;
     int maara;
+    int vesiMaara;
 
     // Construction
     public Kahvinkeitin() {
         vari = "musta";
         merkki = "Electrolux";
+        vesiMaara = 0;
     }
 
     // Toiminto
@@ -30,10 +35,21 @@ class Kahvinkeitin {
         }
     }
 
-    // Tietojen tulostus
+    //Tietojen tulostaminen
     public void TulostaTiedot() {
         System.out.println("*** Kahvinkeittimen tiedot ***");
         System.out.println("Keittimen väri: " + vari);
         System.out.println("Keittimen merkki: " + merkki);
+    }
+
+        //Uusi toiminto veden lisäämiseksi
+    public void LisaaVetta(int maara) {
+        if (maara > 0) {
+            vesiMaara += maara;
+            System.out.println("Lisätty " + maara + " litraa vettä. Uusi vesimäärä: " + vesiMaara + " litraa.");
+        } else {
+            System.out.println("Virhe: Lisättävän veden määrän on oltava positiivinen.");
+        }
+
     }
 }
