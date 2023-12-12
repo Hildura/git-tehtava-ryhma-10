@@ -6,10 +6,10 @@ public class Main {
         mocca.merkki = "MoccaMasteri";
         mocca.TulostaTiedot();
 
-        //lisätään H2O
+        // lisätään H2O
         mocca.LisaaVetta(1);
-        
-        //lisätään puruja
+
+        // lisätään puruja
         mocca.LisaaPuruja(1);
     }
 }// Main class end here
@@ -18,8 +18,6 @@ public class Main {
 class Kahvinkeitin {
     String vari;
     String merkki;
-    int maara;
-    int maara2;
     int vesiMaara;
     int puruMaara;
 
@@ -40,14 +38,14 @@ class Kahvinkeitin {
         }
     }
 
-    //Tietojen tulostaminen
+    // Tietojen tulostaminen
     public void TulostaTiedot() {
         System.out.println("*** Kahvinkeittimen tiedot ***");
         System.out.println("Keittimen väri: " + vari);
         System.out.println("Keittimen merkki: " + merkki);
     }
 
-        //Uusi toiminto veden lisäämiseksi
+    // Uusi toiminto veden lisäämiseksi
     public void LisaaVetta(int maara) {
         if (maara > 0) {
             vesiMaara += maara;
@@ -57,15 +55,15 @@ class Kahvinkeitin {
         }
 
     }
-    
-    	//Uusi toiminto purujen lisäämiseksi
+
+    // Uusi toiminto purujen lisäämiseksi
     public void LisaaPuruja(int maara2) {
-    	if (maara2 > 0) {
-    		puruMaara += maara2;
-    		System.out.println("Lisätty " + maara2 + " kupillista puruja. Uusi kuppimäärä: " + puruMaara + " kuppia.");
-    	} else {
-    		System.out.println("Virhe: Lisättävän purun määrän on oltava positiivinen.");
-    	}
+        if (maara2 > 0) {
+            puruMaara += maara2;
+            System.out.println("Lisätty " + maara2 + " kupillista puruja. Uusi kuppimäärä: " + puruMaara + " kuppia.");
+        } else {
+            System.out.println("Virhe: Lisättävän purun määrän on oltava positiivinen.");
+        }
 
     }
 }
