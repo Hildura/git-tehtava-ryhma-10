@@ -8,6 +8,9 @@ public class Main {
 
         //lisätään H2O
         mocca.LisaaVetta(1);
+        
+        //lisätään puruja
+        mocca.LisaaPuruja(1);
     }
 }// Main class end here
 
@@ -16,7 +19,9 @@ class Kahvinkeitin {
     String vari;
     String merkki;
     int maara;
+    int maara2;
     int vesiMaara;
+    int puruMaara;
 
     // Construction
     public Kahvinkeitin() {
@@ -50,6 +55,17 @@ class Kahvinkeitin {
         } else {
             System.out.println("Virhe: Lisättävän veden määrän on oltava positiivinen.");
         }
+
+    }
+    
+    	//Uusi toiminto purujen lisäämiseksi
+    public void LisaaPuruja(int maara2) {
+    	if (maara2 > 0) {
+    		puruMaara += maara2;
+    		System.out.println("Lisätty " + maara2 + " kupillista puruja. Uusi kuppimäärä: " + puruMaara + " kuppia.");
+    	} else {
+    		System.out.println("Virhe: Lisättävän purun määrän on oltava positiivinen.");
+    	}
 
     }
 }
